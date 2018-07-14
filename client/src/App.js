@@ -14,7 +14,7 @@ class App extends Component {
       .then(res => res.json())
       .then(data => {
         const user = JSON.parse(data);
-        const {curr_p2 = {kills: {valueInt = 0}}, curr_p10 = {kills: {valueInt = 0}}, curr_p9 = {kills: {valueInt = 0}}} = user.stats;
+        const { curr_p2 = {}, curr_p10 = {}, curr_p9 = {} } = user.stats;
         console.log("mika", user);
         this.setState({
           mikaLoading: false,
@@ -30,7 +30,7 @@ class App extends Component {
       .then(data => {
         const user = JSON.parse(data);
         console.log("thomas", user);
-        const {curr_p2 = {kills: {valueInt = 0}}, curr_p10 = {kills: {valueInt = 0}}, curr_p9 = {kills: {valueInt = 0}}} = user.stats;
+        const { curr_p2 = {}, curr_p10 = {}, curr_p9 = {} } = user.stats.curr_p2;
         this.setState({
           thomasLoading: false,
           thomas: {
