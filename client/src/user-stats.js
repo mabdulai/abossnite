@@ -13,7 +13,7 @@ class UserStats extends Component {
         squads: {
           kills: { valueInt: squadKills = 0 }
         }
-      } = this.stats;
+      } = stats;
       return soloKills + duoKills + squadKills;
     }
     return "0";
