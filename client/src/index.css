@@ -1,0 +1,10 @@
+@font-face {
+  font-family: FortFont;
+  src: url(./assets/fonts/BurbankBigCondensed-Bold.otf);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: FortFont;
+}

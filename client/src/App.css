@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://cdn.thetrackernetwork.com/cdn/fm/3A6Efortnite-rocketsdark.jpg');
+  background-size: cover;
+  min-height: 40vh;
+  color: #fff;
+  font-size: 8em;
+  font-weight: 700;
+  text-shadow:5px 5px #1db8f3
+}
+
+.App-intro {
+  font-size: 10em;
+}
+
+h2 {
+  color: #1db8f3;
+}
+
+.total-kills {
+  color: #ff0;
+  font-size: 100px;
+  text-shadow: 5px 2px  #1db8f3;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
