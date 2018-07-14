@@ -14,13 +14,14 @@ class App extends Component {
       .then(res => res.json())
       .then(data => {
         const user = JSON.parse(data);
+        const {curr_p2: {}, curr_p10: {}, curr_p9: {}} = user;
         console.log("mika", user);
         this.setState({
           mikaLoading: false,
           mika: {
-            solo: user.stats.curr_p2 = 0,
-            duo: user.stats.curr_p10 = 0,
-            squads: user.stats.curr_p9 = 0
+            solo: curr_p2,
+            duo: curr_p10,
+            squads: curr_p9
           }
         });
       });
@@ -29,12 +30,13 @@ class App extends Component {
       .then(data => {
         const user = JSON.parse(data);
         console.log("thomas", user);
+        const {curr_p2: {}, curr_p10: {}, curr_p9: {}} = user;
         this.setState({
           thomasLoading: false,
           thomas: {
-            solo: user.stats.curr_p2 = 0,
-            duo: user.stats.curr_p10 = 0,
-            squads: user.stats.curr_p9 = 0
+            solo: curr_p2,
+            duo: curr_p10,
+            squads: curr_p9
           }
         });
       });
