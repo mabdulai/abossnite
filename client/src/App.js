@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import UserStats from "./user-stats";
 import "./App.css";
 
+const emptyData = {
+  kills: {
+    valueInt: 0
+  }
+}
 class App extends Component {
   state = {
     mika: {},
@@ -11,11 +16,11 @@ class App extends Component {
   };
   componentDidMount() {
     fetch("/mika")
-      .then(res => res.json())
+
+    .then(res => res.json())
       .then(data => {
         const user = JSON.parse(data);
-        const { curr_p2 = {}, curr_p10 = {}, curr_p9 = {} } = user.stats;
-        console.log("mika", user);
+        const { curr_p2 = emptyData, curr_p10 = emptyData, curr_p9 = emptyData } = user.stats;
         this.setState({
           mikaLoading: false,
           mika: {
@@ -30,7 +35,7 @@ class App extends Component {
       .then(data => {
         const user = JSON.parse(data);
         console.log("thomas", user);
-        const { curr_p2 = {}, curr_p10 = {}, curr_p9 = {} } = user.stats.curr_p2;
+        const { curr_p2 = emptyData, curr_p10 = emptyData, curr_p9 = emptyData } = user.stats;
         this.setState({
           thomasLoading: false,
           thomas: {
